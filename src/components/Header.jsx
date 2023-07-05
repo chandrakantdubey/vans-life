@@ -1,42 +1,32 @@
-import { Link } from "react-router-dom";
-import logo from "../images/logog.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import login from '../assets/user-icon.png'
 
-function Header() {
-  const navStyle = {
-    fontWeight: "bold",
-    textDecoration: "underline",
-    color: "£161616",
-  };
+export default function Header() {
   return (
-    <div className="header">
-      <div className="navbar">
-        <Link to="/">
-          <img src={logo} className="navbar--logo" />
-        </Link>
-        <div className="navbar--menu">
-          <NavLink
-            style={({ isActive }) => (isActive ? navStyle : null)}
-            to="/about"
-          >
-            About
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => (isActive ? navStyle : null)}
-            to="/vans"
-          >
-            Vans
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => (isActive ? navStyle : null)}
-            to="/host"
-          >
-            Dashboard
-          </NavLink>
+    <header className="row align-items-center py-3">
+      <Link to="/" className="col header__brand">
+        #VansLife
+      </Link>
+      <nav className="col navbar navbar-expand-sm">
+        <button
+          className="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="navbar-nav d-flex gap-2 ms-auto">
+            <NavLink to="host" className={({isActive}) => isActive ? `active nav-item nav-link`: `nav-item nav-link`}>Host</NavLink>
+            <NavLink to="about" className={({isActive}) => isActive ? `active nav-item nav-link`: `nav-item nav-link`}>About</NavLink>
+            <NavLink to="vans" className={({isActive}) => isActive ? `active nav-item nav-link`: `nav-item nav-link`}>Vans</NavLink>
+            <NavLink to="login" className={({isActive}) => isActive ? `active nav-item nav-link`: `nav-item nav-link`}>
+              <img src={login} alt="user icon" />
+            </NavLink>
+          </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
-
-export default Header;

@@ -1,9 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
-    <div className="footer">
-      <p className="footer--text">&copy; 2023 #VANLIFE</p>
+    <div className="row footer">
+      <p className="col">&copy; 2023 Chandrakant Dubey #VansLife</p>
     </div>
   );
 }
-
-export default Footer;

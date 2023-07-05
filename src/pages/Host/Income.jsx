@@ -1,5 +1,5 @@
-function Income() {
+import React from "react";
+
+export default function Income() {
   return <div>Income</div>;
 }
-
-export default Income;
