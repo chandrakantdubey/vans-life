@@ -22,8 +22,8 @@ import HostLayout from "./components/HostLayout"
 
 import PageNotFound from "./components/PageNotFound"
 
-import { Vans, loader as vansLoader } from "./pages/vans/Vans"
-import { VanDetails, loader as vanLoader} from "./pages/vans/VanDetails"
+import { Vans, loader as vansLoader } from "./pages/vansPage/Vans"
+import { VanDetails, loader as vanLoader} from "./pages/vansPage/VanDetails"
 
 import Dashboard from "./pages/host/Dashboard"
 import Income from "./pages/host/Income"
