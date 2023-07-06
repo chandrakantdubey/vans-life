@@ -29,7 +29,7 @@ export async function action({ request }) {
 }
 
 
-export default function Login() {
+export function Login() {
 
     const errorMessage = useActionData()
     const message = useLoaderData()

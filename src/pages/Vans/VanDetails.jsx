@@ -5,7 +5,7 @@ export function loader({ params }) {
   return getVans("/api/vans/" + params.id)
 }
 
-export default function VanDetails() {
+export function VanDetails() {
   const location = useLocation()
   const van = useLoaderData()
 

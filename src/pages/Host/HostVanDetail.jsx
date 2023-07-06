@@ -7,7 +7,7 @@ export async function loader({request, params}){
     return getVans('/api/host/vans/' + params.id)
 }
 
-export default function HostVanDetail() {
+export function HostVanDetail() {
     const currentVan = useLoaderData()
     console.log(currentVan);
     return (

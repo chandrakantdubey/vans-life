@@ -5,7 +5,7 @@ export async function loader(){
   return await getVans("/api/vans")
 }
 
-export default function Vans() {
+export function Vans() {
   const vans = useLoaderData()
 
   const [searchParams, setSearchParams] = useSearchParams()

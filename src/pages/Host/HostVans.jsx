@@ -7,7 +7,7 @@ export async function loader({request}){
   return getVans('/api/host/vans')
 }
 
-export default function HostVans() {
+export function HostVans() {
   const vans = useLoaderData()
 
   const vansElem = vans ? vans.map(van=>{
