@@ -1,17 +1,15 @@
 import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom"
-import { getVans } from "../../utils"
+import { getVans } from "../../api";
+import { requireAuth } from "../../utils"
 
-export function loader({params}){
-    return getVans('/api/host/vans' + params.id)
+export async function loader({request, params}){
+    await requireAuth(request)
+    return getVans('/api/host/vans/' + params.id)
 }
 
-export default function HostVansDetail() {
+export default function HostVanDetail() {
     const currentVan = useLoaderData()
-
-    if(!currentVan){
-        return <h2 className="text-center">Loading van details...</h2>
-    }
-
+    console.log(currentVan);
     return (
         <section>
             <div className="mb-4">

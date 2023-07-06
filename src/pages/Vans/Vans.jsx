@@ -1,8 +1,8 @@
 import { Link, useSearchParams, useLoaderData } from "react-router-dom"
-import { getVans } from "../../utils"
+import { getVans } from "../../api";
 
-export function loader(){
-  return getVans("/api/vans")
+export async function loader(){
+  return await getVans("/api/vans")
 }
 
 export default function Vans() {
@@ -17,7 +17,7 @@ export default function Vans() {
     return (
       <div className="col-12 col-sm-6" key={van.id}>
         <div className="card p-2">
-          <Link to={van.id} state={{search: `?${searchParams.toString()}`}}>
+          <Link to={van.id} state={{search: `?${searchParams.toString()}`, type: typeFilter}}>
               <img src={van.imageUrl} alt={van.title} className="w-100" />
           </Link>
             <div className="card-body">

@@ -1,12 +1,12 @@
-export async function getVans(url){
-    const res = await fetch(url)
-    if(!res.ok){
-        throw {
-            message: "Failed to fetch Vans",
-            statusText: res.statusText,
-            status: res.status,
-        }
+import { redirect } from "react-router-dom"
+
+export async function requireAuth(request) {
+    const pathname = new URL(request.url).pathname
+    const isLoggedIn = localStorage.getItem("loggedin")
+
+    if (!isLoggedIn) {
+        throw redirect(
+            `/login?message=You must log in first.&redirectTo=${pathname}`
+        )
     }
-    const data = await res.json()
-    return data.vans
 }
