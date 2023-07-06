@@ -3,36 +3,36 @@ import {
   createRoutesFromChildren,
   RouterProvider,
   Route
-} from "react-router-dom";
+} from "react-router-dom"
 
-import '../node_modules/bootstrap/dist/js/bootstrap';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import "./App.css";
-import "./server";
+import '../node_modules/bootstrap/dist/js/bootstrap'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import "./App.css"
+import "./server"
 
-import { requireAuth } from "./utils";
+import { requireAuth } from "./utils"
 
-import Home from "./pages/Home";
-import About from "./pages/About";
+import Home from "./pages/Home"
+import About from "./pages/About"
 
-import Error from "./components/Error";
-import { Login, loader as loginLoader, action as loginAction} from "./pages/Login";
-import Layout from "./components/Layout";
-import HostLayout from "./components/HostLayout";
-import Footer from "./components/Footer";
-import PageNotFound from "./components/PageNotFound";
+import Error from "./components/Error"
+import { Login, loader as loginLoader, action as loginAction} from "./pages/Login"
+import Layout from "./components/Layout"
+import HostLayout from "./components/HostLayout"
 
-import { Vans, loader as vansLoader } from "./pages/vans/Vans";
-import { VanDetails, loader as vanLoader} from "./pages/vans/VanDetails";
+import PageNotFound from "./components/PageNotFound"
 
-import Dashboard from "./pages/host/Dashboard";
-import Income from "./pages/host/Income";
-import Reviews from "./pages/host/Reviews";
-import { HostVans, loader as hostVansLoader} from "./pages/host/HostVans";
-import { HostVanDetail, loader as hostVanLoader} from "./pages/host/HostVanDetail";
-import HostVanInfo from "./pages/host/HostVanInfo";
-import HostVanPhotos from "./pages/host/HostVanPhotos";
-import HostVanPricing from "./pages/host/HostVanPricing";
+import { Vans, loader as vansLoader } from "./pages/vans/Vans"
+import { VanDetails, loader as vanLoader} from "./pages/vans/VanDetails"
+
+import Dashboard from "./pages/host/Dashboard"
+import Income from "./pages/host/Income"
+import Reviews from "./pages/host/Reviews"
+import { HostVans, loader as hostVansLoader} from "./pages/host/HostVans"
+import { HostVanDetail, loader as hostVanLoader} from "./pages/host/HostVanDetail"
+import HostVanInfo from "./pages/host/HostVanInfo"
+import HostVanPhotos from "./pages/host/HostVanPhotos"
+import HostVanPricing from "./pages/host/HostVanPricing"
 
 
 const router = createBrowserRouter(createRoutesFromChildren(
@@ -111,9 +111,6 @@ const router = createBrowserRouter(createRoutesFromChildren(
 
 export default function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-      <Footer />
-    </>
-  );
+    <RouterProvider router={router} />
+  )
 }
