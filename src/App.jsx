@@ -25,14 +25,14 @@ import PageNotFound from "./components/PageNotFound"
 import { Vans, loader as vansLoader } from "./pages/vansPage/Vans"
 import { VanDetails, loader as vanLoader} from "./pages/vansPage/VanDetails"
 
-import Dashboard from "./pages/host/Dashboard"
-import Income from "./pages/host/Income"
-import Reviews from "./pages/host/Reviews"
-import { HostVans, loader as hostVansLoader} from "./pages/host/HostVans"
-import { HostVanDetail, loader as hostVanLoader} from "./pages/host/HostVanDetail"
-import HostVanInfo from "./pages/host/HostVanInfo"
-import HostVanPhotos from "./pages/host/HostVanPhotos"
-import HostVanPricing from "./pages/host/HostVanPricing"
+import Dashboard from "./pages/hostPage/Dashboard"
+import Income from "./pages/hostPage/Income"
+import Reviews from "./pages/hostPage/Reviews"
+import { HostVans, loader as hostVansLoader} from "./pages/hostPage/HostVans"
+import { HostVanDetail, loader as hostVanLoader} from "./pages/hostPage/HostVanDetail"
+import HostVanInfo from "./pages/hostPage/HostVanInfo"
+import HostVanPhotos from "./pages/hostPage/HostVanPhotos"
+import HostVanPricing from "./pages/hostPage/HostVanPricing"
 
 
 const router = createBrowserRouter(createRoutesFromChildren(
