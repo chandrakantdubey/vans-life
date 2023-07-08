@@ -5,6 +5,8 @@ export default function HostVanPhotos() {
     console.log(currentVan)
 
     return (
-        <img src={currentVan.imageUrl} className="host-van-detail-image" />
+        <div className="app__wrapper container">
+            <img src={currentVan.imageUrl} className="host-van-detail-image" />
+        </div>
     )
 }

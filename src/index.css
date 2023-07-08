@@ -29,7 +29,6 @@
 }
 body{
     background-color: var(--beige-light);
-    min-height: 100vh;
 }
 .app__wrapper{
     max-width: 840px;

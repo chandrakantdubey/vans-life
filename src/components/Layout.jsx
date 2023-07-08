@@ -4,10 +4,10 @@ import Footer from './Footer'
 
 export default function Layout() {
   return (
-    <div className="container-md app__wrapper">
+    <>
       <Header />
       <Outlet />
       <Footer />
-    </div>
+    </>
   )
 }

@@ -36,33 +36,37 @@ export function Login() {
     const navigation = useNavigation()
 
     return (
-        <div className="d-flex flex-column align-items-center p-5">
-            <h2>Sign in to your account</h2>
-            {message && <h4 className="text-danger">{message}</h4>}
-            {errorMessage && <h4 className="text-danger">{errorMessage}</h4>}
-            <Form className="my-5" method="post" replace>
-                <input
-                    name="email"
-                    type="email"
-                    placeholder="Email address"
-                    className="d-block mb-5 px-5 py-3 rounded-2 border-0"
-                />
-                <input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    className="d-block mb-5 px-5 py-3 rounded-2 border-0"
-                />
-                <button
-                    className="d-block my-2 px-3 py-2 rounded-2 border-0 w-100 bg-warning"
-                    disabled={navigation.state === "submitting"}
-                >
-                    {navigation.state === "submitting"
-                        ? "Logging in..."
-                        : "Log in"
-                    }
-                </button>
-            </Form>
+        <div id="login">
+            <div className="app__width container">
+                <div className="d-flex flex-column align-items-center p-5">
+                    <h2>Sign in to your account</h2>
+                    {message && <h4 className="text-danger">{message}</h4>}
+                    {errorMessage && <h4 className="text-danger">{errorMessage}</h4>}
+                    <Form className="my-5" method="post" replace>
+                        <input
+                            name="email"
+                            type="email"
+                            placeholder="Email address"
+                            className="d-block mb-5 px-5 py-3 rounded-2 border-0"
+                        />
+                        <input
+                            name="password"
+                            type="password"
+                            placeholder="Password"
+                            className="d-block mb-5 px-5 py-3 rounded-2 border-0"
+                        />
+                        <button
+                            className="d-block my-2 px-3 py-2 rounded-2 border-0 w-100 bg-warning"
+                            disabled={navigation.state === "submitting"}
+                        >
+                            {navigation.state === "submitting"
+                                ? "Logging in..."
+                                : "Log in"
+                            }
+                        </button>
+                    </Form>
+                </div>
+            </div>
         </div>
     )
 }

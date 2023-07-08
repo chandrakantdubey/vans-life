@@ -3,7 +3,7 @@ import login from '../assets/user-icon.png'
 
 export default function Header() {
   return (
-    <header className="row align-items-center py-3">
+    <header className="container navbar navbar-expand-md app__wrapper align-items-center py-3">
       <Link to="/" className="col header__brand">
         #VansLife
       </Link>

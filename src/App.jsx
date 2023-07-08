@@ -12,7 +12,7 @@ import "./server"
 
 import { requireAuth } from "./utils"
 
-import Home from "./pages/Home"
+import Home, {loader as homeLoader} from "./pages/Home"
 import About from "./pages/About"
 
 import Error from "./components/Error"
@@ -25,7 +25,7 @@ import PageNotFound from "./components/PageNotFound"
 import { Vans, loader as vansLoader } from "./pages/vansPage/Vans"
 import { VanDetails, loader as vanLoader} from "./pages/vansPage/VanDetails"
 
-import Dashboard from "./pages/hostPage/Dashboard"
+import Dashboard, {loader as dashboardLoader} from "./pages/hostPage/Dashboard"
 import Income from "./pages/hostPage/Income"
 import Reviews from "./pages/hostPage/Reviews"
 import { HostVans, loader as hostVansLoader} from "./pages/hostPage/HostVans"
@@ -37,7 +37,7 @@ import HostVanPricing from "./pages/hostPage/HostVanPricing"
 
 const router = createBrowserRouter(createRoutesFromChildren(
   <Route path="/" element={<Layout />}>
-    <Route index element={<Home />} />
+    <Route index element={<Home />} loader={homeLoader} />
     <Route path="about" element={<About />} />
     <Route
       path="login"
@@ -65,7 +65,7 @@ const router = createBrowserRouter(createRoutesFromChildren(
       <Route
         index
         element={<Dashboard />}
-        loader={async ({ request }) => await requireAuth(request)}
+        loader={dashboardLoader}
       />
       <Route
         path="income"

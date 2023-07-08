@@ -33,38 +33,40 @@ export function Vans() {
   })
 
   return (
-    <div className="row pt-5">
-      <h1 className="fw-bold">Explore our van options</h1>
-      <div className="vans__filter">
-        <button
-          onClick={()=>setSearchParams({type: "simple"})}
-          className={`vans__filter-options ${typeFilter === "simple" ? "simple":""}`}
-        >
-          Simple
-        </button>
+    <div id="vans">
+      <div className="container app__wrapper pt-5 border-2">
+        <h1 className="fw-bold">Explore our van options</h1>
+        <div className="vans__filter">
+          <button
+            onClick={()=>setSearchParams({type: "simple"})}
+            className={`vans__filter-options ${typeFilter === "simple" ? "simple":""}`}
+          >
+            Simple
+          </button>
 
-        <button
-          onClick={()=>setSearchParams({type: "luxury"})}
-          className={`vans__filter-options ${typeFilter === "luxury" ?"luxury":""}`}
-        >
-          Luxury
-        </button>
+          <button
+            onClick={()=>setSearchParams({type: "luxury"})}
+            className={`vans__filter-options ${typeFilter === "luxury" ?"luxury":""}`}
+          >
+            Luxury
+          </button>
 
-        <button
-          onClick={()=>setSearchParams({type: "rugged"})}
-          className={`vans__filter-options ${typeFilter === "rugged" ?"rugged" :""}`}
-        >
-          Rugged
-        </button>
-        {
-          typeFilter ? (
-            <button onClick={()=>setSearchParams({})} className="vans__filter-clear">← Clear filters</button>
-          ) : null
-        }
-      </div>
-      <div className="col vans__list py-4">
-        <div className="row">
-          {vansEl}
+          <button
+            onClick={()=>setSearchParams({type: "rugged"})}
+            className={`vans__filter-options ${typeFilter === "rugged" ?"rugged" :""}`}
+          >
+            Rugged
+          </button>
+          {
+            typeFilter ? (
+              <button onClick={()=>setSearchParams({})} className="vans__filter-clear">← Clear filters</button>
+            ) : null
+          }
+        </div>
+        <div className="col vans__list py-4">
+          <div className="row">
+            {vansEl}
+          </div>
         </div>
       </div>
     </div>

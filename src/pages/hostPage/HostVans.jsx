@@ -28,19 +28,21 @@ export function HostVans() {
   }) : <p>Failed to Fetch</p>
 
   return(
-    <div className="host__vans pt-4">
-      <h2 className="fw-bold">Your listed vans</h2>
-      {
-        vans ?
-          (
-            <div className="host__vans-list d-flex flex-column gap-4 py-4">
-              {vansElem}
-            </div>
-          ) :
-          (
-            <h2 className="text-center">Loading vans ...</h2>
-          )
-      }
+    <div className="app__wrapper container">
+      <div className="host__vans pt-4">
+        <h2 className="fw-bold">Your listed vans</h2>
+        {
+          vans ?
+            (
+              <div className="host__vans-list d-flex flex-column gap-4 py-4">
+                {vansElem}
+              </div>
+            ) :
+            (
+              <h2 className="text-center">Loading vans ...</h2>
+            )
+        }
+      </div>
     </div>
   )
 }
